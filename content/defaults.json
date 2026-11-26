@@ -9,7 +9,7 @@
     "phone": "",
     "linkedin": "",
     "footerSummary": "Connecting international opportunity with local capability in Nigeria and West Africa.",
-    "ctaTitle": "Let’s build what comes next.",
+    "ctaTitle": "Let's build what comes next.",
     "ctaBody": "Have a business opportunity, project or partnership in mind? Start a conversation with our team."
   },
   "pages": [
@@ -17,11 +17,11 @@
       "pageKey": "home", "navLabel": "Home", "path": "/",
       "seoTitle": "LeSeft Nigeria | Trading House & Project Office",
       "seoDescription": "Connecting Nigeria and West Africa to international markets, technology and project opportunities.",
-      "hero": {"eyebrow": "TRADING HOUSE / PROJECT OFFICE", "heading": "Local roots.\nGlobal reach.", "subtitle": "We connect markets, technology and ideas to opportunity across Nigeria and West Africa.", "imagePath": "/images/hero-africa.jpg", "imageAlt": "AI-generated illustrative city skyline and infrastructure, not an actual LeSeft project"},
+      "hero": {"eyebrow": "TRADING HOUSE  /  PROJECT OFFICE", "heading": "Local roots.\nGlobal reach.", "subtitle": "We connect markets, technology and ideas to opportunity across Nigeria and West Africa.", "imagePath": "/images/hero-africa.jpg", "imageAlt": "AI-generated illustrative city skyline and infrastructure, not an actual LeSeft project"},
       "sections": [
         {"key": "intro", "eyebrow": "A DIFFERENT KIND OF CONNECTION", "title": "International perspective.\nOn-the-ground insight.", "body": "LeSeft Nigeria is a Trading House and Project Office connecting international opportunities with local implementation. From our presence in Abuja, we help bring together the people, resources and expertise to move business forward.", "items": []},
         {"key": "capabilities", "eyebrow": "OUR CAPABILITIES", "title": "From opportunity\nto implementation.", "body": "Three connected areas of expertise. One practical approach to doing business across borders.", "items": []},
-        {"key": "approach", "eyebrow": "BUILT ON CONNECTION", "title": "Global connections.\nLocal commitment.", "body": "We bring international relationships together with local coordination, connecting partners across Europe, Asia, Nigeria and West Africa to help turn shared ambition into practical progress.", "items": ["International partner network", "Abuja-based local presence", "Coordination from enquiry to implementation"]},
+        {"key": "approach", "eyebrow": "BUILT ON CONNECTION", "title": "Global connections.\nLocal commitment.", "body": "We bring international relationships together with local coordination—connecting partners across Europe, Asia, Nigeria and West Africa to help turn shared ambition into practical progress.", "items": ["International partner network", "Abuja-based local presence", "Coordination from enquiry to implementation"]},
         {"key": "partners", "eyebrow": "WHO WE WORK WITH", "title": "Better opportunities\nstart together.", "body": "We work with organisations looking to connect, invest and deliver in Nigeria and West Africa.", "items": ["Manufacturers & suppliers", "Commodity buyers", "Nigerian businesses & institutions", "Government & development partners"]}
       ],
       "cards": [
@@ -36,13 +36,13 @@
       "hero": {"eyebrow": "ABOUT LESEFT NIGERIA", "heading": "Grounded here.\nConnected everywhere.", "subtitle": "International perspective and local presence, working together for opportunity.", "imagePath": "/images/partnership.jpg", "imageAlt": "AI-generated illustrative business meeting, not actual LeSeft staff"},
       "sections": [
         {"key": "identity", "eyebrow": "OUR IDENTITY", "title": "A local presence with a broader perspective.", "body": "LeSeft Nigeria is the local operating unit of the LeSeft Group, with an office in Abuja and an operational team on the ground. As a Trading House and Project Office, we connect commodity flows, equipment, technology and projects with opportunities in Nigeria and West Africa.", "items": ["Trading House and Project Office", "Abuja office and local operating team", "Part of the wider LeSeft Group"]},
-        {"key": "approach", "eyebrow": "OUR APPROACH", "title": "Connections made practical.", "body": "Our approach combines the group’s international trade experience and business connections with local implementation capabilities. We help partners identify opportunities and coordinate the steps required to move them forward.", "items": ["Partner identification and coordination", "Logistics and certification coordination", "Project and transaction support"]},
-        {"key": "reach", "eyebrow": "OUR REACH", "title": "Closer to the opportunity.", "body": "Our international network connects Europe and Asia with Nigeria and West Africa, bringing manufacturers, suppliers, buyers, investors and institutions closer to the right conversations.", "items": ["Nigeria & West Africa", "Europe", "Asia"]}
+        {"key": "approach", "eyebrow": "OUR APPROACH", "title": "Connections made practical.", "body": "Our approach combines the group's international trade experience and business connections with local implementation capabilities. We help partners identify opportunities and coordinate the steps required to move them forward.", "items": ["Partner identification and coordination", "Logistics and certification coordination", "Project and transaction support"]},
+        {"key": "reach", "eyebrow": "OUR REACH", "title": "Closer to the opportunity.", "body": "Our international network connects Europe and Asia with Nigeria and West Africa—bringing manufacturers, suppliers, buyers, investors and institutions closer to the right conversations.", "items": ["Nigeria & West Africa", "Europe", "Asia"]}
       ]
     },
     {
       "pageKey": "commodities", "navLabel": "Commodities", "path": "/commodities",
-      "seoTitle": "Commodities | LeSeft Nigeria", "seoDescription": "Explore LeSeft Nigeria’s commodity activities across agriculture, food security, minerals and metals.",
+      "seoTitle": "Commodities | LeSeft Nigeria", "seoDescription": "Explore LeSeft Nigeria's commodity activities across agriculture, food security, minerals and metals.",
       "hero": {"eyebrow": "COMMODITIES", "heading": "Connecting supply\nwith opportunity.", "subtitle": "Supporting commodity enquiries and bringing buyers and suppliers together across markets.", "imagePath": "/images/trade-field.jpg", "imageAlt": "AI-generated illustrative agricultural landscape and grain"},
       "sections": [
         {"key": "agriculture", "eyebrow": "01 / AGRICULTURE & FOOD SECURITY", "title": "Moving essential resources forward.", "body": "We work across agricultural commodities and related products, supporting connections between demand, supply and the people who depend on them.", "items": ["Grains", "Compound feed", "Fertilisers", "Agricultural products and semi-finished products"]},
@@ -74,7 +74,7 @@
     {
       "pageKey": "partners", "navLabel": "For partners", "path": "/for-partners",
       "seoTitle": "For Partners | LeSeft Nigeria", "seoDescription": "Discover how LeSeft Nigeria works with manufacturers, buyers, Nigerian organisations and development partners.",
-      "hero": {"eyebrow": "FOR PARTNERS", "heading": "Partnerships that\nmove things forward.", "subtitle": "The best opportunities start with the right connections. Let’s explore what’s possible together.", "imagePath": "/images/partnership.jpg", "imageAlt": "AI-generated illustrative business meeting, not actual LeSeft partners"},
+      "hero": {"eyebrow": "FOR PARTNERS", "heading": "Partnerships that\nmove things forward.", "subtitle": "The best opportunities start with the right connections. Let's explore what's possible together.", "imagePath": "/images/partnership.jpg", "imageAlt": "AI-generated illustrative business meeting, not actual LeSeft partners"},
       "sections": [
         {"key": "manufacturers", "eyebrow": "01 / MANUFACTURERS & SUPPLIERS", "title": "A local partner for entering new markets.", "body": "For international manufacturers and suppliers of equipment and technologies looking to enter Nigeria and West Africa, our local entity and team provide a point of connection and implementation support.", "items": ["Local implementation support", "Certification and regulatory coordination", "Logistics support", "Distributor and partner identification", "Transaction and project support"]},
         {"key": "buyers", "eyebrow": "02 / BUYERS OF RAW MATERIALS & GOODS", "title": "A closer connection to West African supply.", "body": "For international buyers, including those in Europe, Asia and the Americas, we support specific enquiries and help connect potential buyers with suppliers.", "items": ["Supplier identification and connection", "Commodity enquiry support", "Negotiation coordination", "Logistics and settlement support"]},
@@ -85,9 +85,9 @@
     {
       "pageKey": "contact", "navLabel": "Contact", "path": "/contact",
       "seoTitle": "Contact | LeSeft Nigeria", "seoDescription": "Start a conversation about a partnership, commodity enquiry, equipment or project with LeSeft Nigeria.",
-      "hero": {"eyebrow": "CONTACT US", "heading": "Let’s start a\nconversation.", "subtitle": "Tell us what you are working on and where we can help.", "imagePath": "/images/hero-africa.jpg", "imageAlt": "AI-generated illustrative city skyline, not an actual LeSeft location"},
+      "hero": {"eyebrow": "CONTACT US", "heading": "Let's start a\nconversation.", "subtitle": "Tell us what you are working on and where we can help.", "imagePath": "/images/hero-africa.jpg", "imageAlt": "AI-generated illustrative city skyline, not an actual LeSeft location"},
       "sections": [
-        {"key": "contact-intro", "eyebrow": "GET IN TOUCH", "title": "Good opportunities begin with a conversation.", "body": "Whether you have a commodity enquiry, a project in mind or would like to explore a partnership, we’d like to hear from you.", "items": []}
+        {"key": "contact-intro", "eyebrow": "GET IN TOUCH", "title": "Good opportunities begin with a conversation.", "body": "Whether you have a commodity enquiry, a project in mind or would like to explore a partnership, we'd like to hear from you.", "items": []}
       ]
     }
   ]

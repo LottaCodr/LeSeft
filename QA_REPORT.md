@@ -15,36 +15,10 @@
 - Sanity CLI `--help` and schema types compiled locally. The live Studio and Content Lake were not tested because no company project/credentials were supplied.
 - Figma plugin: JavaScript syntax checked and logic exercised against a mock API, generating 15 top-level frames. It has not been run in Figma desktop.
 
-
-## Button contrast pass (26 November 2026, third review)
-
-- All button variants rebuilt for legibility: default green `#0f362c` with pure white 15px extrabold text (13.25:1), hover `#1c4f40` (9.37:1); `light` 13.54:1; `ondark` 15.18:1 (solid near-opaque deep green replacing an invisible translucent white-on-sky); every interactive variant ≥ 6.5:1 (disabled ~3.5:1 by design). Ratios computed with the WCAG relative-luminance formula.
-- DM Sans ExtraBold (800) bundled; icons inherit high-contrast text color, 1.1em size, 2.25 stroke.
-- Verified in the production build: served HTML classes match; contrast computed; typecheck and build pass; eight routes HTTP 200. Visual verification in a browser is still required because the sandbox has no browser engine.
-
-## UX and button system polish (26 November 2026, second pass)
-
-- Button rebuild: explicit CTA hierarchy (`default`, `light`, `ondark`, `outline`, `secondary`, `ghost`, `link`, `destructive`), near-sharp 3px corners, 40/48/54px sizes, press feedback, disabled states with reduced contrast, darker-hover on lime CTA (hover must darken, never lighten onto a light surface).
-- Header CTA filled; sticky header gains a scroll shadow; form fields at 48px on white with stronger focus halo.
-- Interaction feedback added: capability cards lift on hover, partner rows wash background and nudge arrows, text/network links translate their arrows, hero secondary action promoted from an underline link to a real on-dark button.
-- Separator audit: removal of all decorative `✳` ornaments and middot separators; brand slash is single-spaced everywhere; curly apostrophes applied to prose; SVG connectors are dotted round-cap strokes rather than dashed lines.
-- Verified in the production build: all eight routes return HTTP 200; hero `ondark` button, dotted connector and single-spaced separators confirmed in served HTML; no `✳`, middot bullets, em/en dashes or double-spaced slashes remain in rendered output.
-- Note: no browser engine was available in the review sandbox (system libraries for headless rendering are absent and package installation is restricted), so this pass was verified by rendered-output inspection of HTML and compiled CSS, not by screenshots or an axe-core run. Visual acceptance and accessibility re-testing remain required.
-
-## Design system refactor verification (26 November 2026)
-
-- Stack updated to Tailwind CSS v4 (CSS-first), shadcn/ui-style owned components (`components/ui/`), Radix primitives, semantic tokens with surface/foreground pairs and a `DESIGN_SYSTEM.md` research reference.
-- TypeScript typecheck: passed. Next.js production build: passed.
-- All seven routes returned HTTP 200 from the production server; the contact form renders the Radix-powered category select with a hidden native select (`name="category"`) that works with `FormData` and the endpoint's zod validation.
-- Compiled CSS verified to contain the Tailwind utilities used by the new components, the design tokens and the sheet/overlay animations.
-- Mocked enquiry endpoint suite: all 13 cases passed; no real provider, email or CMS was contacted.
-- Repository-wide scan confirms zero em dashes and zero en dashes across code, content, docs and the Figma plugin (template regenerated `figma-import/code.js`).
-- The pre-refactor Chromium responsive smoke test and axe-core WCAG checks were **not** re-run against the refactored component layer; they are required before any launch decision. Manual keyboard and screen-reader testing of the Sheet navigation, Radix Select, focus rings and `aria-current` state is also required.
-
 ## Required before launch
 
 - Connect and test the company-controlled Sanity project, Studio, staff permissions, public/private dataset configuration and cache revalidation with a real edit.
 - Connect and test Resend, Cloudflare Turnstile, Upstash and the real mailbox; test success and failure modes. Configure trusted forwarded headers at the chosen host.
 - Verify domain/DNS and HTTPS, privacy notice, legal/analytics consent, backups and restore, monitoring and production security.
 - Obtain official brand assets, approved public contact details and copy; replace all AI-generated illustrative images.
-- Re-run the Chromium responsive smoke test and automated axe-core WCAG checks against the refactored components; perform full accessibility, keyboard and screen-reader checks (especially the Sheet navigation and Radix Select), cross-browser/device testing, performance measurement and user acceptance, then conduct CMS training and documented handover.
+- Perform full accessibility, keyboard and screen-reader checks, cross-browser/device testing, performance measurement and user acceptance, then conduct CMS training and documented handover.

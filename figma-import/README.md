@@ -6,7 +6,7 @@ This is an editable Figma **development plugin**, not an existing Figma file. Th
 
 1. Download and unzip the Figma import package. Keep `manifest.json` and `code.js` together in the same folder. You need the Figma **desktop app for macOS or Windows**, an editable Figma Design file, and permission to use local development plugins. Open a new company-controlled Design file (or a page where you have edit permission).
 2. In the desktop app, choose **Plugins → Development → Import new plugin from manifest…**, then select this folder's `manifest.json`.
-3. Run **Plugins → Development → LeSeft Nigeria / Website Concept Importer**. The plugin adds its frames to the current page, to the right of existing content; it does not intentionally remove existing layers. It uses no external network requests. Wait for the completion notification.
+3. Run **Plugins → Development → LeSeft Nigeria — Website Concept Importer**. The plugin adds its frames to the current page, to the right of existing content; it does not intentionally remove existing layers. It uses no external network requests. Wait for the completion notification.
 4. Inspect the Home desktop frame first. Zoom out for the other six desktop frames, the seven mobile frames beneath them and the design-system board below. Text, shapes and image rectangles can be edited independently. If the display fonts are unavailable, Inter is used as a fallback.
 5. Save the file in the **LeSeft-controlled** workspace. Replace the AI-generated images and placeholder wordmark, colours, copy, and contact details with approved assets, and review the layouts. Run the plugin only once unless you want another set of frames.
 

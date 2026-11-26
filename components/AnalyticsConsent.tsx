@@ -1,7 +1,6 @@
 'use client';
 import Script from 'next/script';
 import { useEffect, useState } from 'react';
-import { Button } from '@/components/ui/button';
 
 declare global { interface Window { dataLayer: unknown[]; gtag?: (...args: unknown[]) => void; [key: `ga-disable-${string}`]: boolean } }
 export default function AnalyticsConsent({ measurementId }: { measurementId: string }) {
@@ -24,15 +23,7 @@ export default function AnalyticsConsent({ measurementId }: { measurementId: str
   }
   if (!id || !ready) return null;
   return <>
-    {choice === 'accept' && <Script id="google-analytics" src={`https://www.googletagmanager.com/gtag/js?id=${id}`} strategy="afterInteractive" onLoad={() => { window[`ga-disable-${id}`] = false; window.dataLayer = window.dataLayer || []; window.gtag = (...args: unknown[]) => { window.dataLayer.push(args); }; window.gtag('js', new Date()); window.gtag('consent', 'default', { analytics_storage: 'granted' }); window.gtag('config', id, { anonymize_ip: true }); }} />}
-    {(choice === null || settingsOpen) && (
-      <section className="consent-banner" aria-label="Analytics consent">
-        <div><strong>Your privacy choices</strong><p>With your permission, we use analytics to understand how this site is used. You can change this choice in the footer.</p></div>
-        <div className="consent-actions">
-          <Button variant="outline" size="sm" onClick={() => choose('reject')}>Decline</Button>
-          <Button size="sm" onClick={() => choose('accept')}>Accept analytics</Button>
-        </div>
-      </section>
-    )}
+    {choice === 'accept' && <><Script id="google-analytics" src={`https://www.googletagmanager.com/gtag/js?id=${id}`} strategy="afterInteractive" onLoad={() => { window[`ga-disable-${id}`] = false; window.dataLayer = window.dataLayer || []; window.gtag = (...args: unknown[]) => { window.dataLayer.push(args); }; window.gtag('js', new Date()); window.gtag('consent', 'default', { analytics_storage: 'granted' }); window.gtag('config', id, { anonymize_ip: true }); }} /></>}
+    {(choice === null || settingsOpen) && <section className="consent-banner" aria-label="Analytics consent"><div><strong>Your privacy choices</strong><p>With your permission, we use analytics to understand how this site is used. You can change this choice in the footer.</p></div><div className="consent-actions"><button onClick={() => choose('reject')}>Decline</button><button className="consent-accept" onClick={() => choose('accept')}>Accept analytics</button></div></section>}
   </>;
 }
