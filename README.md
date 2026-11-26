@@ -1,8 +1,8 @@
-# LeSeft Nigeria — corporate website concept
+# LeSeft Nigeria: corporate website concept
 
-A brief-aligned, seven-page Next.js concept with Sanity content schemas, responsive layouts, a secure-form integration scaffold, and a separate editable Figma import plugin. This is a **proposal-stage prototype**, not a completed or approved production website.
+A brief-aligned, seven-page Next.js concept with Sanity content schemas, responsive layouts, a shadcn/ui and Radix-based component system, a two-tier design token architecture, a secure-form integration scaffold, and a separate editable Figma import plugin. This is a **proposal-stage prototype**, not a completed or approved production website.
 
-## Current status — read before sharing or launch
+## Current status: read before sharing or launch
 
 - **Available now:** Seven responsive pages, draft copy, navigation, enquiry form UI, SEO metadata, image optimisation, accessibility basics, Sanity page/settings schemas, a separately deployable Sanity Studio, CMS read integration with draft fallback, optional consent-gated analytics, and server-side enquiry-delivery integration code.
 - **Not connected or verified:** No company Sanity project, hosted Studio, email delivery, Turnstile or Upstash rate limiter is configured. In the preview, the form is disabled and `/api/enquiry` returns 503 rather than pretending to send. The Sanity fetch path, content editing and live email/spam services require real company-controlled accounts and end-to-end tests.
@@ -37,11 +37,20 @@ Open the local URL printed by Next.js. With no configuration, the site shows the
 
 ## Architecture
 
-- **Frontend:** Next.js App Router, React, TypeScript; locally bundled DM Sans and DM Serif Display fonts. No browser-facing call to localhost or hard-coded API host.
+- **Frontend:** Next.js App Router, React, TypeScript; Tailwind CSS v4 (CSS-first configuration via `postcss.config.mjs`, no `tailwind.config.js`); shadcn/ui-style owned components in `components/ui/` composed on Radix primitives (Dialog, Label, Select, Separator, Slot) and varied with `class-variance-authority`; semantic design tokens as CSS variables on `:root`, exposed to utilities through `@theme inline` (see `DESIGN_SYSTEM.md`); locally bundled DM Sans and DM Serif Display fonts. No browser-facing call to localhost or hard-coded API host.
 - **CMS:** Sanity Content Lake, a server-side read client in `lib/content.ts`, a page/sections/cards schema and site-settings schema in `sanity/schemaTypes`. Published content is requested with a 60-second revalidation setting. Missing fields/content use the local draft fallback. The authoring Studio is deployed separately using `sanity.config.ts`; staff authenticate with Sanity and receive permissions from the company-owned organisation. Sanity plan restrictions apply.
 - **Enquiries:** The Next.js endpoint validates input and request origin, bounds request size, checks a honeypot, applies a Redis-backed rate limit, validates Cloudflare Turnstile server-side against the canonical hostname, and sends a plain-text email via Resend. It fails closed if configuration or a security/delivery service is missing. No message is stored by the app itself; the email service/provider and receiving mailbox may retain data. Rate-limit keys are HMACs of the forwarded IP, but remain pseudonymous personal data in some jurisdictions.
 - **Analytics:** Disabled by default. Setting a valid Google Analytics 4 measurement ID enables an opt-in prompt; the tag loads only after acceptance. Review the consent and privacy implementation with LeSeft's legal/privacy team before enabling it.
 - **SEO:** Page metadata, sitemap and robots route. Until a valid HTTPS `NEXT_PUBLIC_SITE_URL` is set at build time, pages are marked noindex and robots disallows crawling. Set the final HTTPS origin only after content approval.
+
+## Design system
+
+The interface is built on a single-token, semantic architecture informed by deep research into Figma Community design systems (shadcn/ui, Radix Themes, Untitled UI, Material 3, Primer, Carbon) and industry design-engineering practice. See **`DESIGN_SYSTEM.md`** for the full research synthesis, the token reference, the component inventory and the principles applied. Highlights:
+
+- Surface/foreground token pairs (`--background`/`--foreground`, `--primary`/`--primary-foreground`, ...), never raw hex in components; brand primitives (forest, lime, cream, deep, gold) retained underneath.
+- Accessible Radix primitives for all interactive chrome: the mobile menu is a focus-trapped `Sheet` (Radix Dialog), the form category is a keyboard-operable Radix `Select` with a hidden native select for `FormData`, and labels are Radix `Label`.
+- 44px minimum touch targets, visible gold focus ring, `prefers-reduced-motion` support, a print stylesheet, `aria-current` navigation state and a single radius scale.
+- Typography rule: no em dashes anywhere in code, content, docs or Figma frames.
 
 ## Connect a company-controlled Sanity project
 
@@ -82,7 +91,7 @@ Domain, hosting, Sanity paid tiers, transactional email, rate-limit/spam service
 
 ## Tests performed
 
-The production build and TypeScript check passed. `npm audit --omit=dev` reported zero known production dependency advisories on 26 November 2026; repeat the audit before launch. Seven page routes were checked in Chromium at desktop (1440), tablet (768) and mobile (390) widths; no horizontal overflow, missing images or JavaScript page errors were observed. Automated axe-core WCAG 2 A/AA and 2.1 A/AA checks reported no violations on the seven routes at desktop and mobile sizes. Mobile navigation, contact-category prefill, disabled unconfigured form and the 503 unconfigured API response were checked. Schema types were compiled locally. This is not a comprehensive accessibility, cross-browser, security, Sanity integration or email-delivery audit.
+After the design system refactor on 26 November 2026: the production build and TypeScript check passed; all seven routes returned HTTP 200 from the production server; the contact form prefill and hidden native select for the enquiry category render correctly; the mocked enquiry endpoint suite passed (13 cases, no real provider contacted); and a repository-wide scan confirms zero em and en dashes. The Tailwind v4 utility output, design tokens and shadcn/Radix primitives were verified in the compiled CSS. Earlier in the prototype cycle (pre-refactor), the seven routes were checked in Chromium at desktop (1440), tablet (768) and mobile (390) widths with no horizontal overflow, missing images or page-level JavaScript errors, and automated axe-core WCAG 2 A/AA and 2.1 A/AA checks reported no violations on the seven routes at desktop and mobile sizes. **Important:** those Chromium and axe-core checks were not re-run against the refactored component layer; they must be repeated before any launch decision, alongside manual keyboard and screen-reader testing of the new Sheet navigation and Radix Select. `npm audit --omit=dev` reported zero known production dependency advisories on 26 November 2026; repeat the audit before launch. Schema types were compiled locally. This is not a comprehensive accessibility, cross-browser, security, Sanity integration or email-delivery audit.
 
 ### Dependency overrides
 
