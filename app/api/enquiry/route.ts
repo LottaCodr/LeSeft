@@ -52,7 +52,7 @@ export async function POST(req: NextRequest) {
     if (!verification.ok || !verified.success || verified.hostname !== expectedHostname) return reply({ error: 'The security check failed. Please try again.' }, 400);
     const { name, organisation, email, phone, category, subject, message } = parsed.data;
     const messageText = [`Enquiry category: ${category}`, `Name: ${name}`, `Organisation: ${organisation || 'Not provided'}`, `Email: ${email}`, `Phone: ${phone || 'Not provided'}`, `Subject: ${subject || 'Not provided'}`, '', 'Message:', message].join('\n');
-    const send = await fetch('https://api.resend.com/emails', { method: 'POST', headers: { Authorization: `Bearer ${RESEND_API_KEY}`, 'Content-Type': 'application/json' }, body: JSON.stringify({ from: CONTACT_FROM_EMAIL, to: [CONTACT_TO_EMAIL], reply_to: email, subject: `LeSeft website enquiry: ${category}`, text: messageText }), signal: AbortSignal.timeout(10_000), cache: 'no-store' });
+    const send = await fetch('https://api.resend.com/emails', { method: 'POST', headers: { Authorization: `Bearer ${RESEND_API_KEY}`, 'Content-Type': 'application/json' }, body: JSON.stringify({ from: CONTACT_FROM_EMAIL, to: [CONTACT_TO_EMAIL], reply_to: email, subject: `LeSeft website enquiry — ${category}`, text: messageText }), signal: AbortSignal.timeout(10_000), cache: 'no-store' });
     if (!send.ok) { console.error('Enquiry email provider failed', send.status); return reply({ error: 'Your enquiry could not be sent. Please try again later.' }, 502); }
     return reply({ ok: true }, 200);
   } catch { console.error('Enquiry security or delivery service failed'); return reply({ error: 'Your enquiry could not be sent. Please try again later.' }, 503); }

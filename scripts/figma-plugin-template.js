@@ -93,8 +93,8 @@ function internalHero(root,p,w,y,mobile) {
   const introY=(mobile?139:168)+head.height+22;
   text(s,'Hero introduction',p.hero.subtitle,x,introY,mobile?w-40:510,15,C.muted,'body',1.7);
   text(s,'Hero marker','○   LESEFT NIGERIA  /  OUR WORLD',x,mobile?350:418,Math.min(380,w-x-20),10,'#7b9182','bold');
-  if(mobile){ picture(s,'Hero image, illustrative',0,405,w,295,p.hero.imagePath); }
-  else {picture(s,'Hero image, illustrative',720,0,w-720,505,p.hero.imagePath); box(s,'Image tab',w-116,463,116,42,C.sage);text(s,'Image tab label','LESEFT   ↗',w-101,477,92,9,C.ink,'bold');}
+  if(mobile){ picture(s,'Hero image — illustrative',0,405,w,295,p.hero.imagePath); }
+  else {picture(s,'Hero image — illustrative',720,0,w-720,505,p.hero.imagePath); box(s,'Image tab',w-116,463,116,42,C.sage);text(s,'Image tab label','LESEFT   ↗',w-101,477,92,9,C.ink,'bold');}
   return y+h;
 }
 function contentSections(root,p,w,y,mobile) {
@@ -132,7 +132,7 @@ function contactSection(root,p,w,y,mobile) {
   const fx=mobile?20:700, fy=mobile?435:75, fw=mobile?w-40:660, form=frame(s,'Enquiry form',fx,fy,fw,mobile?810:760,'#f2f5ef');
   text(form,'Form heading','Send an enquiry',25,28,fw-50,30,C.ink,'serif');
   text(form,'Form introduction','Tell us a little about your opportunity. Fields marked * are required.',25,72,fw-50,12,C.muted);
-  box(form,'Preview notice background',25,104,fw-50,55,'#fff8e8'); text(form,'Preview notice','PREVIEW ONLY: Enquiry delivery and spam protection are not yet configured.',37,115,fw-74,11,'#6b542c','bold',1.5);
+  box(form,'Preview notice background',25,104,fw-50,55,'#fff8e8'); text(form,'Preview notice','PREVIEW ONLY — Enquiry delivery and spam protection are not yet configured.',37,115,fw-74,11,'#6b542c','bold',1.5);
   const fields=[['Full name *',''],['Organisation (optional)',''],['Email address *',''],['Phone number (optional)',''],['What is your enquiry about? *','General  ⌄'],['Subject (optional)',''],['Your message *','Tell us about the opportunity or project…']];
   let yy=182;
   if(mobile){
@@ -148,7 +148,7 @@ function contactSection(root,p,w,y,mobile) {
 function home(root,p,w,y,mobile) {
   const x=mobile?20:80, innerW=mobile?w-40:w-160;
   const heroH=mobile?610:650, hero=frame(root,'02 / Home hero',0,y,w,heroH,C.deep);
-  picture(hero,'Hero image, illustrative',0,0,w,heroH,p.hero.imagePath); box(hero,'Image overlay',0,0,w,heroH,C.deep,.68);
+  picture(hero,'Hero image — illustrative',0,0,w,heroH,p.hero.imagePath); box(hero,'Image overlay',0,0,w,heroH,C.deep,.68);
   eyebrow(hero,p.hero.eyebrow,x,mobile?88:112,C.lime);
   const title=text(hero,'Hero headline',p.hero.heading,x,mobile?130:155,mobile?w-40:760,mobile?58:94,C.white,'serif',1.02);
   const sy=(mobile?130:155)+title.height+28; text(hero,'Hero introduction',p.hero.subtitle,x,sy,mobile?w-40:500,mobile?15:16,'#e3e9df','body',1.7);
@@ -166,7 +166,7 @@ function home(root,p,w,y,mobile) {
   if(!mobile) text(sc,'Capabilities introduction',cap.body,970,132,390,15,C.muted,'body',1.8);
   const cw=mobile?innerW:(innerW-40)/3;
   p.cards.forEach((card,i)=>{const xx=mobile?x:x+i*(cw+20), yy=cardsStart+(mobile?i*(cardH+16):0), cf=frame(sc,`Capability card / ${card.title}`,xx,yy,cw,cardH,C.paper);
-    picture(cf,'Card image, illustrative',0,0,cw,mobile?220:250,card.imagePath); text(cf,'Card number',card.number,17,16,40,10,C.white,'bold'); box(cf,'Card arrow background',cw-40,mobile?180:210,40,40,C.lime); text(cf,'Card arrow','↗',cw-27,mobile?189:219,20,16,C.forest,'bold');
+    picture(cf,'Card image — illustrative',0,0,cw,mobile?220:250,card.imagePath); text(cf,'Card number',card.number,17,16,40,10,C.white,'bold'); box(cf,'Card arrow background',cw-40,mobile?180:210,40,40,C.lime); text(cf,'Card arrow','↗',cw-27,mobile?189:219,20,16,C.forest,'bold');
     const cy=mobile?244:274; text(cf,'Card title',card.title,23,cy,cw-46,26,C.ink,'serif',1.1); text(cf,'Card description',card.description,23,cy+43,cw-46,13,C.muted,'body',1.65); text(cf,'Card link','Explore capability   ↗',23,cardH-40,cw-46,11,C.forest,'bold');
   }); y+=hc;
   const a=p.sections.find(s=>s.key==='approach'), hn=mobile?800:570, sn=frame(root,'06 / Global connections',0,y,w,hn,C.forest); eyebrow(sn,a.eyebrow,x,75,C.lime);
@@ -185,15 +185,15 @@ function home(root,p,w,y,mobile) {
   y=cta(root,w,y,mobile); return footer(root,w,y,mobile);
 }
 function createPageDesign(p,index,mobile,originX,originY) {
-  const w=mobile?390:1440, root=frame(figma.currentPage,`${String(index+1).padStart(2,'0')} / ${p.navLabel} / ${mobile?'Mobile':'Desktop'}`,originX,originY,w,1000,C.paper,false);
+  const w=mobile?390:1440, root=frame(figma.currentPage,`${String(index+1).padStart(2,'0')} — ${p.navLabel} / ${mobile?'Mobile':'Desktop'}`,originX,originY,w,1000,C.paper,false);
   let y=header(root,w,mobile);
   if(p.pageKey==='home') y=home(root,p,w,y,mobile);
   else { y=internalHero(root,p,w,y,mobile); y=p.pageKey==='contact'?contactSection(root,p,w,y,mobile):contentSections(root,p,w,y,mobile); if(p.pageKey!=='contact')y=cta(root,w,y,mobile); y=footer(root,w,y,mobile); }
   root.resize(w,y); root.clipsContent=true; return root;
 }
 function designSystem(x,y) {
-  const f=frame(figma.currentPage,'00 / Design system / draft',x,y,1440,560,C.paper);
-  text(f,'Board title','LeSeft Nigeria / Concept system',80,55,1050,44,C.ink,'serif'); text(f,'Board note','DRAFT: Replace the wordmark, colours, imagery and content with LeSeft-approved assets.',80,113,1100,13,C.muted);
+  const f=frame(figma.currentPage,'00 — Design system / draft',x,y,1440,560,C.paper);
+  text(f,'Board title','LeSeft Nigeria / Concept system',80,55,1050,44,C.ink,'serif'); text(f,'Board note','DRAFT — Replace the wordmark, colours, imagery and content with LeSeft-approved assets.',80,113,1100,13,C.muted);
   text(f,'Colour label','COLOUR PALETTE',80,180,300,10,C.muted,'bold');
   [['Deep forest',C.deep],['Forest',C.forest],['Sage',C.sage],['Paper',C.paper],['Muted ink',C.muted]].forEach(([label,col],i)=>{const bx=80+i*205;const b=box(f,`Swatch / ${label}`,bx,210,175,100,col);b.strokes=[solid(C.line)];b.strokeWeight=1;text(f,`Colour / ${label}`,label+'  '+col.toUpperCase(),bx,325,180,12,C.ink,'bold');});
   text(f,'Typography label','TYPOGRAPHY',80,400,300,10,C.muted,'bold'); text(f,'Display example','International perspective.',80,428,650,40,C.ink,'serif'); text(f,'Body example','A calm, clear corporate voice.\nDM Serif Display + DM Sans (or Inter fallback).',830,427,500,14,C.muted,'body',1.6);

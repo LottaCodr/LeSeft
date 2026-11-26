@@ -1,4 +1,4 @@
-# LeSeft Nigeria: CMS and handover quick guide
+# LeSeft Nigeria — CMS and handover quick guide
 
 The following applies **after** the company-owned Sanity project and standalone Studio have been configured. The current prototype is not connected to a real CMS.
 
@@ -15,7 +15,6 @@ The following applies **after** the company-owned Sanity project and standalone 
 - Initial wording and images are a concept, not approved company material. AI-generated images do not depict actual LeSeft offices, staff, partners, projects or locations. Replace every hero and card image, and obtain image rights and company approval.
 - Never put credentials, API tokens, personal sensitive information or unpublished confidential project information in a public dataset.
 - Review text, phone/email links, SEO descriptions, image accessibility, form routing and the company privacy notice before publication.
-- Do not use em dashes in website copy. Use commas, colons or full stops; the site design system prohibits them in code and content. Separate related points with the brand slash (for example, "Trading House / Project Office") where a separator is genuinely needed.
 - Staff access is administered in Sanity; exact role and permission options depend on the company's plan. Remove access promptly when no longer required.
 
 ## Backup and recovery
