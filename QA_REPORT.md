@@ -16,6 +16,15 @@
 - Figma plugin: JavaScript syntax checked and logic exercised against a mock API, generating 15 top-level frames. It has not been run in Figma desktop.
 
 
+## UX and button system polish (26 November 2026, second pass)
+
+- Button rebuild: explicit CTA hierarchy (`default`, `light`, `ondark`, `outline`, `secondary`, `ghost`, `link`, `destructive`), near-sharp 3px corners, 40/48/54px sizes, press feedback, disabled states with reduced contrast, darker-hover on lime CTA (hover must darken, never lighten onto a light surface).
+- Header CTA filled; sticky header gains a scroll shadow; form fields at 48px on white with stronger focus halo.
+- Interaction feedback added: capability cards lift on hover, partner rows wash background and nudge arrows, text/network links translate their arrows, hero secondary action promoted from an underline link to a real on-dark button.
+- Separator audit: removal of all decorative `✳` ornaments and middot separators; brand slash is single-spaced everywhere; curly apostrophes applied to prose; SVG connectors are dotted round-cap strokes rather than dashed lines.
+- Verified in the production build: all eight routes return HTTP 200; hero `ondark` button, dotted connector and single-spaced separators confirmed in served HTML; no `✳`, middot bullets, em/en dashes or double-spaced slashes remain in rendered output.
+- Note: no browser engine was available in the review sandbox (system libraries for headless rendering are absent and package installation is restricted), so this pass was verified by rendered-output inspection of HTML and compiled CSS, not by screenshots or an axe-core run. Visual acceptance and accessibility re-testing remain required.
+
 ## Design system refactor verification (26 November 2026)
 
 - Stack updated to Tailwind CSS v4 (CSS-first), shadcn/ui-style owned components (`components/ui/`), Radix primitives, semantic tokens with surface/foreground pairs and a `DESIGN_SYSTEM.md` research reference.

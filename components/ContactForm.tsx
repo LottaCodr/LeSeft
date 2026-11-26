@@ -69,7 +69,7 @@ export default function ContactForm({ configured, siteKey, initialType }: { conf
       </div>
       {configured && <div className="turnstile-slot" ref={slot} aria-label="Spam protection" />}
       <p className="form-footnote" id="form-footnote">Please do not include sensitive personal or financial information. Your details are used to respond to your enquiry.</p>
-      <Button className="h-[51px] w-full justify-between px-5" disabled={!configured || !token || busy} type="submit">
+      <Button className="h-12 w-full gap-2.5" disabled={!configured || !token || busy} type="submit">
         <span>{busy ? 'Sending…' : 'Send enquiry'}</span>
         <ArrowUpRight size={17} aria-hidden="true" />
       </Button>
