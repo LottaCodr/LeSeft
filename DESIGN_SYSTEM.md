@@ -93,6 +93,17 @@ After design review, the button layer and interaction feedback were rebuilt:
 - Cards lift on hover, partner rows wash with background and nudge their arrow, text links move their arrow diagonally instead of growing their gap.
 - Redundant middle-dot separators were replaced with the brand slash; copy uses curly apostrophes.
 
+### Button contrast pass (26 November 2026, third review)
+
+User-reported illegible green button text led to a full variant-by-variant contrast rebuild:
+
+- `default` is now near-black green `#0f362c` with pure white 15px `font-extrabold` text (13.25:1); hover lightens to `#1c4f40` (9.37:1). Hover on the old `light`/`default` variants no longer washes out.
+- `light` (hero primary) is `#e9f2d9` on text `#0e281f` (13.54:1) with a darker hover `#d3e4b5` (11.58:1).
+- `ondark` (hero secondary on photography) is a solid near-opaque `#0c2b21/90` with white text and a pale-lime border (15.18:1), replacing the effectively invisible translucent white/10 over bright sky regions.
+- `secondary`, `outline`, `ghost`, `link`, `destructive` all use dark text on light surfaces or white on dark surfaces with ≥ 6.5:1; disabled states sit at ~3.5:1 which is intentional.
+- Semantic tokens `--primary-foreground` is now `#ffffff`, `--accent-foreground` `#0e281f`, `--accent` `#e9f2d9`; the DM Sans 800 weight is bundled (`font-extrabold` is genuine, not synthesised).
+- Icons inherit the same high-contrast color, scale at 1.1em with a 2.25 stroke.
+
 ### Deliberate non-adoptions
 
 - No dark mode yet: the approved brand dossier is a single light editorial theme; the token pairing convention leaves `.dark` a clean future addition.
