@@ -1,0 +1,10 @@
+const fs = require('fs');
+const path = require('path');
+const root=path.resolve(__dirname,'..');
+const data=JSON.parse(fs.readFileSync(path.join(root,'content/defaults.json'),'utf8'));
+const names=['hero-africa.jpg','trade-field.jpg','energy-infrastructure.jpg','partnership.jpg'];
+const assets=Object.fromEntries(names.map(n=>[`/images/${n}`,fs.readFileSync(path.join(root,'public/images',n)).toString('base64')]));
+const template=fs.readFileSync(path.join(root,'scripts/figma-plugin-template.js'),'utf8');
+const code=template.replace('__DATA__',JSON.stringify(data)).replace('__ASSETS__',JSON.stringify(assets));
+fs.writeFileSync(path.join(root,'figma-import/code.js'),code);
+console.log('Generated figma-import/code.js with editable frame instructions and embedded illustrative assets.');

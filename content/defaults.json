@@ -1,0 +1,94 @@
+{
+  "settings": {
+    "brandName": "LeSeft",
+    "brandQualifier": "NIGERIA",
+    "tagline": "Trading House & Project Office",
+    "officeCity": "Abuja, Nigeria",
+    "address": "",
+    "email": "",
+    "phone": "",
+    "linkedin": "",
+    "footerSummary": "Connecting international opportunity with local capability in Nigeria and West Africa.",
+    "ctaTitle": "Let's build what comes next.",
+    "ctaBody": "Have a business opportunity, project or partnership in mind? Start a conversation with our team."
+  },
+  "pages": [
+    {
+      "pageKey": "home", "navLabel": "Home", "path": "/",
+      "seoTitle": "LeSeft Nigeria | Trading House & Project Office",
+      "seoDescription": "Connecting Nigeria and West Africa to international markets, technology and project opportunities.",
+      "hero": {"eyebrow": "TRADING HOUSE  /  PROJECT OFFICE", "heading": "Local roots.\nGlobal reach.", "subtitle": "We connect markets, technology and ideas to opportunity across Nigeria and West Africa.", "imagePath": "/images/hero-africa.jpg", "imageAlt": "AI-generated illustrative city skyline and infrastructure, not an actual LeSeft project"},
+      "sections": [
+        {"key": "intro", "eyebrow": "A DIFFERENT KIND OF CONNECTION", "title": "International perspective.\nOn-the-ground insight.", "body": "LeSeft Nigeria is a Trading House and Project Office connecting international opportunities with local implementation. From our presence in Abuja, we help bring together the people, resources and expertise to move business forward.", "items": []},
+        {"key": "capabilities", "eyebrow": "OUR CAPABILITIES", "title": "From opportunity\nto implementation.", "body": "Three connected areas of expertise. One practical approach to doing business across borders.", "items": []},
+        {"key": "approach", "eyebrow": "BUILT ON CONNECTION", "title": "Global connections.\nLocal commitment.", "body": "We bring international relationships together with local coordination—connecting partners across Europe, Asia, Nigeria and West Africa to help turn shared ambition into practical progress.", "items": ["International partner network", "Abuja-based local presence", "Coordination from enquiry to implementation"]},
+        {"key": "partners", "eyebrow": "WHO WE WORK WITH", "title": "Better opportunities\nstart together.", "body": "We work with organisations looking to connect, invest and deliver in Nigeria and West Africa.", "items": ["Manufacturers & suppliers", "Commodity buyers", "Nigerian businesses & institutions", "Government & development partners"]}
+      ],
+      "cards": [
+        {"key": "commodities", "number": "01", "title": "Commodities", "description": "Connecting buyers and suppliers across agriculture, food security, minerals and metals.", "href": "/commodities", "imagePath": "/images/trade-field.jpg", "imageAlt": "AI-generated illustrative agricultural landscape and grain"},
+        {"key": "equipment", "number": "02", "title": "Equipment & technologies", "description": "Sourcing solutions for energy, mining, water and industry through our international network.", "href": "/equipment-and-technologies", "imagePath": "/images/energy-infrastructure.jpg", "imageAlt": "AI-generated illustrative energy infrastructure"},
+        {"key": "projects", "number": "03", "title": "Projects & services", "description": "Supporting projects from early concepts and feasibility through to implementation.", "href": "/projects-and-services", "imagePath": "/images/partnership.jpg", "imageAlt": "AI-generated illustrative business meeting, not actual LeSeft staff"}
+      ]
+    },
+    {
+      "pageKey": "about", "navLabel": "About", "path": "/about",
+      "seoTitle": "About Us | LeSeft Nigeria", "seoDescription": "Meet LeSeft Nigeria: a Trading House and Project Office with local presence and international connections.",
+      "hero": {"eyebrow": "ABOUT LESEFT NIGERIA", "heading": "Grounded here.\nConnected everywhere.", "subtitle": "International perspective and local presence, working together for opportunity.", "imagePath": "/images/partnership.jpg", "imageAlt": "AI-generated illustrative business meeting, not actual LeSeft staff"},
+      "sections": [
+        {"key": "identity", "eyebrow": "OUR IDENTITY", "title": "A local presence with a broader perspective.", "body": "LeSeft Nigeria is the local operating unit of the LeSeft Group, with an office in Abuja and an operational team on the ground. As a Trading House and Project Office, we connect commodity flows, equipment, technology and projects with opportunities in Nigeria and West Africa.", "items": ["Trading House and Project Office", "Abuja office and local operating team", "Part of the wider LeSeft Group"]},
+        {"key": "approach", "eyebrow": "OUR APPROACH", "title": "Connections made practical.", "body": "Our approach combines the group's international trade experience and business connections with local implementation capabilities. We help partners identify opportunities and coordinate the steps required to move them forward.", "items": ["Partner identification and coordination", "Logistics and certification coordination", "Project and transaction support"]},
+        {"key": "reach", "eyebrow": "OUR REACH", "title": "Closer to the opportunity.", "body": "Our international network connects Europe and Asia with Nigeria and West Africa—bringing manufacturers, suppliers, buyers, investors and institutions closer to the right conversations.", "items": ["Nigeria & West Africa", "Europe", "Asia"]}
+      ]
+    },
+    {
+      "pageKey": "commodities", "navLabel": "Commodities", "path": "/commodities",
+      "seoTitle": "Commodities | LeSeft Nigeria", "seoDescription": "Explore LeSeft Nigeria's commodity activities across agriculture, food security, minerals and metals.",
+      "hero": {"eyebrow": "COMMODITIES", "heading": "Connecting supply\nwith opportunity.", "subtitle": "Supporting commodity enquiries and bringing buyers and suppliers together across markets.", "imagePath": "/images/trade-field.jpg", "imageAlt": "AI-generated illustrative agricultural landscape and grain"},
+      "sections": [
+        {"key": "agriculture", "eyebrow": "01 / AGRICULTURE & FOOD SECURITY", "title": "Moving essential resources forward.", "body": "We work across agricultural commodities and related products, supporting connections between demand, supply and the people who depend on them.", "items": ["Grains", "Compound feed", "Fertilisers", "Agricultural products and semi-finished products"]},
+        {"key": "minerals", "eyebrow": "02 / MINERALS & METALS", "title": "Opening pathways for mineral trade.", "body": "We support enquiries relating to mineral and metal commodities, including positions sourced from West Africa where available and appropriate to the enquiry.", "items": ["Mineral concentrates", "Products of primary mineral processing", "Other West African commodity positions, subject to specific enquiries"]}
+      ]
+    },
+    {
+      "pageKey": "equipment", "navLabel": "Equipment & technologies", "path": "/equipment-and-technologies",
+      "seoTitle": "Equipment & Technologies | LeSeft Nigeria", "seoDescription": "Explore international equipment and technology solutions for energy, mining, water and industry.",
+      "hero": {"eyebrow": "EQUIPMENT & TECHNOLOGIES", "heading": "Technology with\na purpose.", "subtitle": "Connecting the right equipment and technologies with the needs of ambitious projects.", "imagePath": "/images/energy-infrastructure.jpg", "imageAlt": "AI-generated illustrative energy infrastructure, not an actual LeSeft project"},
+      "sections": [
+        {"key": "energy", "eyebrow": "01 / ENERGY", "title": "Power for a changing future.", "body": "We connect project requirements with equipment and technology through our international network. Export finance support may be available for eligible projects, subject to partner approval and terms.", "items": ["Small, medium and large-scale thermal power plants", "Energy storage systems", "Alternative energy solutions", "Export finance support for eligible projects"]},
+        {"key": "mining", "eyebrow": "02 / MINING & MINERAL PROCESSING", "title": "Solutions for resources and industry.", "body": "We support the identification of equipment and technologies suited to mining and primary mineral-processing projects, including potential export finance support for eligible projects.", "items": ["Mining equipment", "Primary mineral-processing technologies", "Equipment and technology solutions for mining projects", "Export finance support for eligible projects"]},
+        {"key": "industrial", "eyebrow": "03 / INDUSTRIAL EQUIPMENT", "title": "The essential components of progress.", "body": "From individual components to water-treatment solutions, we help connect industrial requirements with suitable international suppliers and technologies.", "items": ["Pumps", "Transformers", "Heat exchangers", "Valves", "Water-treatment equipment and technologies"]}
+      ]
+    },
+    {
+      "pageKey": "projects", "navLabel": "Projects & services", "path": "/projects-and-services",
+      "seoTitle": "Projects & Services | LeSeft Nigeria", "seoDescription": "Project development, implementation support, training and localisation across Nigeria and West Africa.",
+      "hero": {"eyebrow": "PROJECTS & SERVICES", "heading": "Ideas into action.\nTogether.", "subtitle": "From early feasibility to implementation, we help coordinate the people and expertise behind progress.", "imagePath": "/images/partnership.jpg", "imageAlt": "AI-generated illustrative project meeting, not actual LeSeft staff"},
+      "sections": [
+        {"key": "management", "eyebrow": "01 / PROJECT DEVELOPMENT", "title": "A considered path from concept to launch.", "body": "We support states and private investors through project development and management, helping coordinate work from feasibility through implementation and launch.", "items": ["Project concept development", "Feasibility studies", "Partner identification and selection", "Transaction structuring", "Project coordination and implementation support"]},
+        {"key": "energy-projects", "eyebrow": "02 / ENERGY PROJECTS", "title": "Building the foundations for reliable energy.", "body": "We support the development of energy projects through feasibility, partner and technology selection and implementation coordination.", "items": ["Thermal power generation projects", "Energy project feasibility studies", "Partner and technology selection", "Project implementation support"]},
+        {"key": "mining-projects", "eyebrow": "03 / MINING & METALS PROJECTS", "title": "Turning resource potential into opportunity.", "body": "From early-stage study to sourcing and project support, we help bring mining and primary mineral-processing opportunities into focus.", "items": ["Mining project development", "Primary mineral-processing projects", "Feasibility studies", "Equipment and technology sourcing", "Project implementation support"]},
+        {"key": "water", "eyebrow": "04 / WATER RESOURCES", "title": "Thoughtful solutions for essential resources.", "body": "We support water-resource management and the development of water infrastructure and treatment solutions.", "items": ["Water-resource management", "Water infrastructure and treatment solutions", "Project development and implementation support"]},
+        {"key": "training", "eyebrow": "05 / TRAINING, MARKET DEVELOPMENT & LOCALISATION", "title": "Building capability that lasts.", "body": "We connect the delivery of equipment and projects with the people, partnerships and local capabilities needed to support them.", "items": ["Corporate and technical training", "Personnel training on supplied equipment", "Partner identification and negotiation support across Europe, Asia, Nigeria and West Africa", "Localisation of production", "Local capacity and personnel development"]}
+      ]
+    },
+    {
+      "pageKey": "partners", "navLabel": "For partners", "path": "/for-partners",
+      "seoTitle": "For Partners | LeSeft Nigeria", "seoDescription": "Discover how LeSeft Nigeria works with manufacturers, buyers, Nigerian organisations and development partners.",
+      "hero": {"eyebrow": "FOR PARTNERS", "heading": "Partnerships that\nmove things forward.", "subtitle": "The best opportunities start with the right connections. Let's explore what's possible together.", "imagePath": "/images/partnership.jpg", "imageAlt": "AI-generated illustrative business meeting, not actual LeSeft partners"},
+      "sections": [
+        {"key": "manufacturers", "eyebrow": "01 / MANUFACTURERS & SUPPLIERS", "title": "A local partner for entering new markets.", "body": "For international manufacturers and suppliers of equipment and technologies looking to enter Nigeria and West Africa, our local entity and team provide a point of connection and implementation support.", "items": ["Local implementation support", "Certification and regulatory coordination", "Logistics support", "Distributor and partner identification", "Transaction and project support"]},
+        {"key": "buyers", "eyebrow": "02 / BUYERS OF RAW MATERIALS & GOODS", "title": "A closer connection to West African supply.", "body": "For international buyers, including those in Europe, Asia and the Americas, we support specific enquiries and help connect potential buyers with suppliers.", "items": ["Supplier identification and connection", "Commodity enquiry support", "Negotiation coordination", "Logistics and settlement support"]},
+        {"key": "nigeria", "eyebrow": "03 / NIGERIAN STATE & PRIVATE SECTOR", "title": "International expertise for local ambitions.", "body": "For Nigerian organisations, states and private investors seeking international business and project-development support, we help identify partners and coordinate opportunities.", "items": ["Agro-industrial zone development", "Energy generation and water infrastructure projects", "Project concepts and feasibility studies", "International partner identification", "Transaction structuring"]},
+        {"key": "institutions", "eyebrow": "04 / GOVERNMENT & DEVELOPMENT INSTITUTIONS", "title": "Connecting markets and shared priorities.", "body": "We support closer economic and trade relationships between Nigeria, West Africa and international markets, including Europe, Asia and the Americas.", "items": ["Trade and economic connections", "Investment and project enquiries", "International collaboration"]}
+      ]
+    },
+    {
+      "pageKey": "contact", "navLabel": "Contact", "path": "/contact",
+      "seoTitle": "Contact | LeSeft Nigeria", "seoDescription": "Start a conversation about a partnership, commodity enquiry, equipment or project with LeSeft Nigeria.",
+      "hero": {"eyebrow": "CONTACT US", "heading": "Let's start a\nconversation.", "subtitle": "Tell us what you are working on and where we can help.", "imagePath": "/images/hero-africa.jpg", "imageAlt": "AI-generated illustrative city skyline, not an actual LeSeft location"},
+      "sections": [
+        {"key": "contact-intro", "eyebrow": "GET IN TOUCH", "title": "Good opportunities begin with a conversation.", "body": "Whether you have a commodity enquiry, a project in mind or would like to explore a partnership, we'd like to hear from you.", "items": []}
+      ]
+    }
+  ]
+}

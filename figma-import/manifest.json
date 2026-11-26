@@ -1,0 +1,8 @@
+{
+  "name": "LeSeft Nigeria — Website Concept Importer",
+  "api": "1.0.0",
+  "editorType": ["figma"],
+  "main": "code.js",
+  "documentAccess": "dynamic-page",
+  "networkAccess": { "allowedDomains": ["none"] }
+}
