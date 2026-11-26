@@ -16,6 +16,12 @@
 - Figma plugin: JavaScript syntax checked and logic exercised against a mock API, generating 15 top-level frames. It has not been run in Figma desktop.
 
 
+## Button contrast pass (26 November 2026, third review)
+
+- All button variants rebuilt for legibility: default green `#0f362c` with pure white 15px extrabold text (13.25:1), hover `#1c4f40` (9.37:1); `light` 13.54:1; `ondark` 15.18:1 (solid near-opaque deep green replacing an invisible translucent white-on-sky); every interactive variant ≥ 6.5:1 (disabled ~3.5:1 by design). Ratios computed with the WCAG relative-luminance formula.
+- DM Sans ExtraBold (800) bundled; icons inherit high-contrast text color, 1.1em size, 2.25 stroke.
+- Verified in the production build: served HTML classes match; contrast computed; typecheck and build pass; eight routes HTTP 200. Visual verification in a browser is still required because the sandbox has no browser engine.
+
 ## UX and button system polish (26 November 2026, second pass)
 
 - Button rebuild: explicit CTA hierarchy (`default`, `light`, `ondark`, `outline`, `secondary`, `ghost`, `link`, `destructive`), near-sharp 3px corners, 40/48/54px sizes, press feedback, disabled states with reduced contrast, darker-hover on lime CTA (hover must darken, never lighten onto a light surface).

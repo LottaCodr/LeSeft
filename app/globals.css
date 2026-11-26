@@ -28,13 +28,13 @@
   --popover: #fffefa;
   --popover-foreground: #15352e;
   --primary: #123b31;
-  --primary-foreground: #f2f7e9;
+  --primary-foreground: #ffffff;
   --secondary: #eef2ea;
-  --secondary-foreground: #173f33;
+  --secondary-foreground: #122b21;
   --muted-surface: #f1f4ed;
   --muted-foreground: #5b6f64;
-  --accent: #e0ebce;
-  --accent-foreground: #163c2f;
+  --accent: #e9f2d9;
+  --accent-foreground: #0e281f;
   --destructive: #b3261e;
   --destructive-foreground: #ffffff;
   --success: #e0ebd7;
