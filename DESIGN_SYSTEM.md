@@ -75,9 +75,23 @@ The pre-existing editorial layout CSS was kept intentionally (hero, ribbon, netw
 
 `components/Brand.tsx` de-duplicates the wordmark between header, footer and sheet; when LeSeft uploads an approved logo in Sanity settings, all entry points update together.
 
-### Typography rule
+### Typography and separator rules
 
-The em dash (U+2014) is prohibited across copy, code, comments, documents and generated Figma frames. Use a colon, comma, full stop or the brand slash separator instead. This now holds repo-wide and is retained in the Figma plugin template (`scripts/figma-plugin-template.js`, which regenerates `figma-import/code.js`).
+- No em dash (U+2014), en dash or any dash variant anywhere in copy, code, comments, documents or generated Figma frames. Use a colon, comma, full stop or the brand slash separator instead. Enforced by a scripted scan in the QA process and retained in the Figma plugin template (`scripts/figma-plugin-template.js`, which regenerates `figma-import/code.js`).
+- The brand slash separator is set with single spaces (`TRADING HOUSE / PROJECT OFFICE`). The previous double-spaced form and the decorative eight-spoked asterisk ornaments are prohibited.
+- Apostrophes in prose are typographic (`’`), never straight quotes.
+- SVG connectors use dotted round-cap strokes, never dashed lines.
+
+### UX and button system pass (26 November 2026, second review)
+
+After design review, the button layer and interaction feedback were rebuilt:
+
+- `Button` variants now carry a clear CTA hierarchy: `default` (forest, shadow lift), `light` (accent lime on dark imagery, hover darkens), `ondark` (translucent white for photographic surfaces), `outline` (1.5px border, filled hover), `secondary`, `ghost`, `link`, `destructive`. Corners are near-sharp (`3px`), matching the editorial brand; sizes are 40/48/54px; icon glyphs scale with font size; `active:translate-y-[1px]` press feedback; disabled states read as disabled instead of merely translucent.
+- Hero CTA pair is now `light` + `ondark`, both `size="lg"`, so the hero has one obvious primary action and a legible secondary action on the photographic background.
+- The header CTA is a filled primary button; the sticky header gains a scroll shadow; the top-strip separator uses the brand slash.
+- Form fields are 48px high on white with 3px focus halo; the submit button is full-width, centered and gap-consistent.
+- Cards lift on hover, partner rows wash with background and nudge their arrow, text links move their arrow diagonally instead of growing their gap.
+- Redundant middle-dot separators were replaced with the brand slash; copy uses curly apostrophes.
 
 ### Deliberate non-adoptions
 

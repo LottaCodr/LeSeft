@@ -44,7 +44,7 @@ export default function Footer({ settings }: { settings: Settings }) {
       <Separator className="footer-separator" />
       <div className="wrap footer-bottom">
         <span>© {new Date().getFullYear()} {settings.brandName} {settings.brandQualifier}. All rights reserved.</span>
-        <span>TRADING HOUSE &nbsp; / &nbsp; PROJECT OFFICE</span>
+        <span>TRADING HOUSE / PROJECT OFFICE</span>
       </div>
     </footer>
   );
